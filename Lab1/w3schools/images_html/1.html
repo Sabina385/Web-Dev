@@ -1,0 +1,123 @@
+<!-- HTML Images -->
+<img src="pic_trulli.jpg" alt="Italian Trulli">
+<img src="img_chania.jpg" alt="Flowers in Chania">
+
+<!-- HTML Images Syntax -->
+<img src="url" alt="alternatetext">
+
+<!-- The src Attribute -->
+<img src="img_chania.jpg" alt="Flowers in Chania">
+
+<!-- Image Size - Width and Height -->
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+<!-- Images in Another Folder -->
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<!-- Images on Another Server/Website -->
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+<!-- Animated Images -->
+<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+<!-- Image as a Link -->
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<!-- Image Floating -->
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p>
+
+-------------------------------------------------------------------------------------------
+
+What is a correct HTML element for adding an image?
+The <img> element
+
+Use the HTML image attributes to set the size of the image to 250 pixels wide and 400 pixels tall.
+<img src="scream.png" width="250" height="400">
+
+-------------------------------------------------------------------------------------------
+
+
+<!-- HTML Image Maps -->
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+<!-- The Image -->
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<!-- Shape="poly" -->
+<area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+
+<!-- Image Map and JavaScript -->
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+
+<!-- HTML Background Images -->
+<p style="background-image: url('img_girl.jpg');"></p>
+<style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
+
+<!-- Background Image on a Page -->
+ <style>
+body {
+  background-image: url('img_girl.jpg');
+}
+</style>
+
+<style>
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+
+<!-- Background Cover -->
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<!-- Background Stretch -->
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+-------------------------------------------------------------------------------------------
+What is a correct CSS property for defining background images?
+The background-image property
+
+To add a background image on an entire HTML page, on which element should you specify the background image?
+The <body> element
+
+Add a background image named "myimage.png" on a HTML element.
+<p style="background-image: url('myimage.png');">
