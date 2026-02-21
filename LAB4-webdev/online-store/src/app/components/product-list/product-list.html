@@ -1,0 +1,33 @@
+<div class="grid">
+  <div class="card" *ngFor="let product of products; trackBy: trackById">
+    
+   
+    <div class="image-area">
+    <button class="nav-arrow left" (click)="prevImage(product, $event)">❮</button>
+    
+    <img [src]="getCurrentImage(product)" [alt]="product.name">
+    
+    <button class="nav-arrow right" (click)="nextImage(product, $event)">❯</button>
+  </div>
+
+    
+    <h3>{{ product.name }}</h3>
+
+   
+    <p class="description">{{ product.description }}</p>
+
+    
+    <div class="price">{{ formatPrice(product.price) }} ₸</div>
+
+   
+    <div class="rating">
+      <span class="star" *ngFor="let star of getStars(product.rating)">⭐</span>
+      <span class="rating-value">({{ product.rating }})</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="kaspi-link" [href]="product.link" target="_blank">Open in the Kaspi.kz app</a>
+      <button class="whatsapp-btn" (click)="shareWhatsApp(product)">Share on WhatsApp</button>
+    </div>
+  </div>
+</div>
