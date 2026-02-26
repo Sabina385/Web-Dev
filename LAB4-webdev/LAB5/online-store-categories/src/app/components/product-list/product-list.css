@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+}
+.empty-msg{
+  font-size:60px;
+  text-align: center;
+  padding: 100px 0;
+  grid-column: 1 / -1;
+}

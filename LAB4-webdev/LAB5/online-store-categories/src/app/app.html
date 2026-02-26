@@ -1,0 +1,27 @@
+<header class="top-navbar">
+  <div class="header-container">
+    <img  src="https://logoimg.careerjet.net/474377f0502623b1cb62dbbc99cd0a28.png" alt="Kaspi.kz Logo" class="logo">
+  </div>
+</header>
+
+
+
+<div class="container">
+  <nav class="category-list">
+    @for (cat of categories; track cat.id) {
+      <button 
+        [class.active]="selectedCategoryId === cat.id"
+        (click)="selectCategory(cat.id)">
+        {{ cat.name }}
+      </button>
+    }
+  </nav>
+</div>
+<main>
+  @if (selectedCategoryId) {
+    <app-product-list [products]="getFilteredProducts()"></app-product-list>
+  } @else {
+    <div class="welcome">Select a category to see products.</div>
+  }
+</main>
+

@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="product-info"  >
+  <img [src]="product().image" alt="photo">
+  <h3>{{ product().name }}</h3>
+  <p>{{ product().description }}</p>
+  <div class="price">
+  {{ product().price }} ₸
+</div>
+  </div>
+  <div class="actions-container">
+  <div class="stats">
+
+  
+   <div class="rating-block">
+
+  <span class="stars">
+    <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+      <span 
+        class="star"
+        [class.filled]="i < product().rating">
+        ★
+      </span>
+    </ng-container>
+  </span>
+
+ 
+  <span class="rating-number">
+    {{ product().rating }}
+  </span>
+</div>
+  
+  <div class="likes">
+    ❤️ {{ product().likes }}
+  </div>
+
+</div>
+  
+  <button class="btn-action"(click)="like()">❤ Like</button>
+  <button   *ngIf="product().likes < 10" class="btn-action btn-delete" (click)="delete()">Delete</button>
+  <button 
+  class="btn-action btn-kaspi" 
+  (click)="openKaspi()">
+  Kaspi.kz
+</button>
+  <button class="btn-action btn-whatsapp" (click)="share('wa')">WhatsApp</button>
+  </div>
+</div>

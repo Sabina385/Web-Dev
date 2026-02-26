@@ -1,0 +1,11 @@
+<div class="products-grid">
+  @for (prod of displayProducts(); track prod.id) {
+    <app-product-item
+      [product]="prod" 
+      (remove)="onRemoveProduct($event)"
+      (likeChanged)="onLikeProduct($event)"> 
+    </app-product-item>
+  } @empty {
+    <p class="empty-msg">There are no products in this category yet.</p>
+  }
+</div>
