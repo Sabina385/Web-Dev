@@ -1,0 +1,5 @@
+def count_hi(s):
+    return s.count("hi")
+s = input()
+
+print(count_hi(s))
